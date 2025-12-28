@@ -1,8 +1,23 @@
 
+import './ManageCategories.css';
+
+import CategoryForm from '../../Components/CategoryForm/CategoryForm';
+import CategoryList from '../../Components/CategoryList/CategoryList';
+
 const ManageCategories = () => {
 
     return(
-        <div>ManageCategories</div>
+        
+        <div className="category-container text-light">
+            <div className="left-column">
+                <CategoryForm/>
+            </div>
+
+            <div className="right-column">
+                <CategoryList/>
+            </div>
+        </div>
+
     )
 }
 
