@@ -13,7 +13,7 @@ const CategoryForm = () => {
     const [data, setData] = useState({
         name:"",
         description:"",
-        bgColor:"#000000",
+        bgcolor:"#000000",
     });
 
     useEffect(() => {
@@ -44,7 +44,7 @@ const CategoryForm = () => {
                 setData({
                     name: "",
                     description: "",
-                    bgColor: "#000000",
+                    bgcolor: "#000000",
                 });
                 setImage(false);
             }
@@ -102,16 +102,16 @@ const CategoryForm = () => {
                                 <label htmlFor="bgcolor" className="form-label">Background color</label>
                                 <br />
                                 <input type="color"
-                                       name="bgColor"
-                                       id="bgcolor"
+                                       name="bgcolor"
+                                       id="bgColor"
                                        onChange={onChangeHandler}
-                                       value={data.bgColor}
+                                       value={data.bgcolor}
                                        placeholder="#ffffff" />
                             </div>
 
                             <button type="submit"
                                     disabled={laoding}
-                                    className="btn btn-warning w-100">[loading ? "Loading...." : "Submit"]</button>
+                                    className="btn btn-warning w-100">{laoding ? "Loading...." : "Submit"}</button>
 
                         </form>
                     </div>
