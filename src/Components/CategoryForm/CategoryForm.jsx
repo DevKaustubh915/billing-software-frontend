@@ -31,8 +31,10 @@ const CategoryForm = () => {
         setLaoding(true);
         if(! image){
             toast.error("Select Category Image");
+            setLaoding(false);
             return;
         }
+        setLaoding(true);
         const formData = new FormData();
         formData.append("category" , JSON.stringify(data));
         formData.append("file" , image);
